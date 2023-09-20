@@ -61,10 +61,7 @@
   },
   "overrides": [
     {
-      "files": [
-        "*.ts",
-        "*.tsx"
-      ],
+      "files": ["*.ts", "*.tsx"],
       "parser": "@typescript-eslint/parser",
       "parserOptions": {
         "ecmaFeatures": {
@@ -74,14 +71,10 @@
         "sourceType": "module",
         "project": "./tsconfig.json"
       },
-      "plugins": [
-        "@typescript-eslint"
-      ]
+      "plugins": ["@typescript-eslint"]
     },
     {
-      "files": [
-        "next.config.js"
-      ],
+      "files": ["next.config.js"],
       "parser": "espree",
       "parserOptions": {
         "ecmaVersion": 2021,
@@ -89,7 +82,5 @@
       }
     }
   ],
-  "plugins": [
-    "unused-imports"
-  ]
+  "plugins": ["unused-imports"]
 }
