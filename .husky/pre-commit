@@ -1,0 +1,17 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+# Run lint-staged (ESLint and Prettier on staged files)
+yarn lint-staged
+
+# Run ESLint with fix
+yarn lint:fix
+
+# Run ESLint
+yarn lint
+
+# Run Prettier
+yarn format
+
+# Run TypeScript type checking
+yarn typecheck
