@@ -1,8 +1,9 @@
-import LiveVideoWithWorker from "../components/PlayerWithWorker";
+import { FC } from "react";
+import Player from "../components/players/Player";
+import { WsPlayerProps } from "../types";
 
-const WebSocketsPlayer = () => {
-  // return <LiveVideo {...{ height: 1000, width: 1000 }} />;
-  return <LiveVideoWithWorker {...{ height: 1000, width: 1000 }} />;
+const WebSocketsPlayer: FC<WsPlayerProps> = (props) => {
+  return <Player {...props} />;
 };
 
 export default WebSocketsPlayer;

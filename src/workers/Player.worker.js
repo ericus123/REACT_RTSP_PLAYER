@@ -1,6 +1,6 @@
 self.onmessage = (e) => {
-  if (e.data === "start") {
-    const socket = new WebSocket(`${process.env.NEXT_PUBLIC_STREAM_WS}`);
+  if (e.data.type === "start" && e.data.wsUrl) {
+    const socket = new WebSocket(e.data.wsUrl);
 
     socket.onopen = () => {
       self.postMessage({ type: "open" });
